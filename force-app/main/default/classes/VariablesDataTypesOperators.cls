@@ -37,8 +37,10 @@ public with sharing class VariablesDataTypesOperators {
         if (a == null || b == null) {
             return null;
         }
-        s = a + b;
-        return s;
+        y = a + b;
+        return y;
+
+        // Practice pull request
         // return null; // Replace null with the variable you used to store the result
     }
     /**This is Julie */

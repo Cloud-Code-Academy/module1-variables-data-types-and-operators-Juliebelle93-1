@@ -18,10 +18,9 @@
  * If statements are not specifically covered in the lesson this module, but review module 2 flow control section for an overview if needed.
  * Resources: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_if_else.htm 
  * 
- * @author Your Name
+ * @author Julie Hernandez
+ * 
  */
-
-public with sharing class VariablesDataTypesOperators {
     /**
      * Question 1
      * Performs addition of two numbers.
@@ -31,19 +30,23 @@ public with sharing class VariablesDataTypesOperators {
      * @param b The second number.
      * @return The sum of the two numbers, or null if either number is null.
      */
-
-    public static Integer addition(Integer a, Integer b) {  
-
+public with sharing class VariablesDataTypesOperators {
+    /**
+     * Performs addition of two numbers.
+     * If either number is null, return null.
+     */
+    public static Integer addition(Integer a, Integer b) {
         if (a == null || b == null) {
             return null;
         }
-        y = a + b;
-        return y;
+        Integer result = a + b;   // declare the variable before using it
+    return result;            // return the variable as the prompt suggests
+}
 
-        // Practice pull request
-        // return null; // Replace null with the variable you used to store the result
-    }
-    /**This is Julie */
+
+    // Practice pull request
+    // return null; // Replace null with the variable you used to store the result
+   
 
 
     /**
@@ -54,8 +57,14 @@ public with sharing class VariablesDataTypesOperators {
      * @param b The second number.
      * @return The difference between the two numbers.
      */
-    public static Integer subtraction(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+    // A method that subtracts two numbers
+    public static Integer subtraction(Integer a, Integer b) 
+    {
+        if (a == null || b == null) {
+            return null;
+        }
+        Integer result = a - b;
+        return result;
     }
 
     /**
@@ -66,8 +75,14 @@ public with sharing class VariablesDataTypesOperators {
      * @param b The second number.
      * @return The product of the two numbers.
      */
-    public static Integer multiplication(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+    public static Integer multiplication(Integer a, Integer b) 
+    {
+        if (a == null || b==null) {
+            return null;
+
+        }
+        Integer result = a * b;
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -79,8 +94,16 @@ public with sharing class VariablesDataTypesOperators {
      * @param b The denominator.
      * @return The quotient of the division, or 0 if the denominator is zero.
      */
-    public static Double division(Double a, Double b) {
-        return null; // Replace null with the variable you used to store the result
+    public static Integer division(Integer a, Integer b) 
+    {
+        if (a == null || b == null){
+        return null; 
+        }
+
+        Integer result = a / b;
+        return result;
+
+        // Replace null with the variable you used to store the result
     }
 
     /**
@@ -93,8 +116,17 @@ public with sharing class VariablesDataTypesOperators {
      * @param num The number to check.
      * @return True if the number is even, False otherwise.
      */
-    public static Boolean isEven(Integer num) {
-        return null; // Replace null with the variable you used to store the result
+    public static Boolean isEven(Integer num) 
+    {
+        if(num == null) {
+            return false;
+        }
+        Integer result = Math.mod(num, 2);
+         if(result == 0) {
+            return true;
+         } else {
+            return false;
+         }
     }
 
     /**
@@ -104,10 +136,18 @@ public with sharing class VariablesDataTypesOperators {
      * @param num The number to check.
      * @return true if the number is positive, false otherwise.
      */
-    public static Boolean isPositive(Integer num) {
-        return null; // Replace null with the variable you used to store the result
+    public static Boolean isPositive(Integer num) 
+    {
+        if(num == null)
+        {
+            return false;
+        }
+        if(num > 0){
+            return true;
+        } else {
+            return false;
+        }
     }
-
     /**
      * Question 7
      * Concatenates two strings.
@@ -117,8 +157,13 @@ public with sharing class VariablesDataTypesOperators {
      * @return The concatenated string.
      */
     public static String concatenateStrings(String str1, String str2) {
-        return null; // Replace null with the variable you used to store the result
+    if (str1 == null || str2 == null) {
+        return null;
     }
+    String result = str1 + str2;  // no quotes around variables
+    return result;
+}       
+
 
 	/**
      * Question 8
@@ -131,9 +176,17 @@ public with sharing class VariablesDataTypesOperators {
 	 * @param endingPunctuation The punctuation to end the sentence, e.g., '.', '!', '?'
 	 * @return The complete sentence as a single String.
 	 */
-	public static String createSentence(String noun, String verb, String endingPunctuation) {
-		return null; // Replace null with the variable you used to store the result
-	}
+	public static String createSentence(String noun, String verb, String endingPunctuation)
+    {
+        if(noun == null || verb == null || endingPunctuation == null){
+            return null;
+        } else {
+            String result = 'The' + noun + 'is' + verb + endingPunctuation;
+            return result;
+        }
+        
+    }
+
 
     /**
      * Question 9
@@ -145,8 +198,12 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is in the past, False otherwise.
      */
     public static Boolean isDateInPast(Date dt) {
-        return null; // Replace null with the variable you used to store the result
+    if (dt == null) {
+        return false;
     }
+    Boolean result = dt < Date.today();
+    return result;
+}
 
     /**
      * Question 10

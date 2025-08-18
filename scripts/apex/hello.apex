@@ -59,3 +59,12 @@
 // System.debug(VariablesDataTypesOperators.isDateInPast(dt));
 
 // Q10
+// Date dt = Date.newInstance(2025, 8, 17);
+// Date dt = Date.newInstance (2024, 8,17);
+// Date dt = Date.newInstance (2025, 8,18);
+// System.debug(VariablesDataTypesOperators.isDateTodayOrFuture(dt));
+
+/// Q11
+// Integer m = 1;
+// System.debug(VariablesDataTypesOperators.convertMinutesToMilliseconds(m));
+

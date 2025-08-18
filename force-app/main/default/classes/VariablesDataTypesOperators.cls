@@ -214,25 +214,33 @@ public with sharing class VariablesDataTypesOperators {
      * @param dt The date to check.
      * @return True if the date is today or in the future, False otherwise.
      */
-    public static Boolean isDateTodayOrFuture(Date dt) {
-        return null; // Replace null with the variable you used to store the result
+    public static Boolean isDateTodayOrFuture(Date dt) 
+    {
+        if(dt == null)
+            return false;
+        Boolean result = dt >= Date.today();
+        return result;
     }
 
-    /**
-     * Question 11
-     * Converts the number of minutes to milliseconds.
-     * The conversion factor from minutes to milliseconds is a constant of 60000.
-     * Formula: Milliseconds = minutes * 60000
-     * Example: convertMinutesToMilliseconds(1) should return 60000
-     * @param minutes The number of minutes.
-     * @return The number of milliseconds equivalent to the given number of minutes.
-     */
-    Integer MILLISECONDS_PER_MINUTE = null; // Make this value a constant
-    public static Integer convertMinutesToMilliseconds(Integer minutes) {
-        Integer milliseconds;
-        return null; // Replace null with the variable you used to store the result
-    }    
+/**
+ * Question 11
+ * Converts the number of minutes to milliseconds.
+ * The conversion factor from minutes to milliseconds is a constant of 60000.
+ * Formula: Milliseconds = minutes * 60000
+ * Example: convertMinutesToMilliseconds(1) should return 60000
+ * @param minutes The number of minutes.
+ * @return The number of milliseconds equivalent to the given number of minutes.
+ */
+public static final Integer MILLISECONDS_PER_MINUTE = 60000;
 
+public static Integer convertMinutesToMilliseconds(Integer minutes) {
+    if (minutes == null) {
+        return null;
+    }
+    Integer milliseconds = minutes * MILLISECONDS_PER_MINUTE;
+    return milliseconds;
+}
+  
     /**
      * Question 12
      * Calculates the average of three numbers.
